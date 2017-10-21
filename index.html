@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+   src="https://code.jquery.com/jquery-2.2.4.min.js"
+   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+   crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <button id='button'> Button</button>
+    <div id = 'field1'>
+       'Field1,field2,field3,field4,field5' </div>
+    <div id = 'field2'>
+
+    </div>
+    <script>
+              var label1 = $('#field1').text();
+              var label1split = label1.split(',')
+              var label1splice = label1split.splice(2,1);
+
+              $('#button').on('click',()=>{
+                console.log('label1splice '+label1splice);
+                $('#field2').empty();
+                $("#field2").append(label1splice);
+                $("#field1").empty();
+                $("#field1").append(label1split);
+
+              });
+
+  </script>
+
+
+
+
+  </body>
+
+
+</html>
